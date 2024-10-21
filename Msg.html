@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Status</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/CSS/msg.css">
+</head>
+<body>
+    <div class="message-box" id="message-box">
+        <div class="icon" id="status-icon">
+            <i class="fas fa-check-circle"></i> <!-- Success icon -->
+        </div>
+        <h2 id="status-heading">Login Successful</h2>
+        <p id="status-message">You have successfully signed into your account. You can close this window and continue using the product.</p>
+        <button id="continue-btn">Continue</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let isLoggedIn = false; // Simulate logged in status
+
+            const messageBox = document.getElementById('message-box');
+            const statusHeading = document.getElementById('status-heading');
+            const statusMessage = document.getElementById('status-message');
+            const statusIcon = document.getElementById('status-icon');
+
+            if (isLoggedIn) {
+                statusHeading.textContent = 'Login Successful';
+                statusMessage.textContent = 'You have successfully signed into your account. You can close this window and continue using the product.';
+                statusIcon.innerHTML = '<i class="fas fa-check-circle"></i>'; // Tick icon for success
+                statusIcon.classList.add('success'); // Add success color to icon
+            } else {
+                statusHeading.textContent = 'Error';
+                statusMessage.textContent = 'Please sign up or log in to continue.';
+                messageBox.classList.add('error'); // Change background color to red for error
+                statusIcon.innerHTML = '<i class="fas fa-times-circle"></i>'; // Cross icon for error
+                statusIcon.classList.add('error'); // Add error color to icon
+            }
+
+            document.getElementById('continue-btn').addEventListener('click', function() {
+                if (isLoggedIn) {
+                    window.location.href = 'dashboard.html'; // Redirect to dashboard if logged in
+                } else {
+                    window.location.href = 'login.html'; // Redirect to login/signup if not logged in
+                }
+            });
+        });
+    </script>
+</body>
+</html>

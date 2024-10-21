@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title> <!-- Title changed to Quiz Master -->
+    <link rel="stylesheet" href="./assets/CSS/contact.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Quiz Master</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./dashboard.html">Dashboard</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Form with Validation -->
+    <div class="contact-container">
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+            <form id="contactForm" onsubmit="return validateForm()" action="#" method="post">
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <textarea name="message" id="message" placeholder="Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-image">
+            <img src="./assets/Images/illustration-medieval-historical-man_183364-30973.jpg" 
+                 alt="Historical Man Illustration" 
+                 style="width: 500px; height: 500px;">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2024 PraRoz. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Form Validation -->
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            // Simple name validation (at least 2 characters)
+            if (name.length < 2) {
+                alert("Name must be at least 2 characters long.");
+                return false;
+            }
+            
+            // Email validation using regex
+            const emailPattern = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            // Simple message validation (at least 10 characters)
+            if (message.length < 10) {
+                alert("Message must be at least 10 characters long.");
+                return false;
+            }
+
+            // If all checks pass
+            return true;
+        }
+    </script>
+</body>
+</html>

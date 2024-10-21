@@ -1,0 +1,194 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #507687;
+}
+
+.navbar .logo h1 {
+    color: orange;
+    font-size: 28px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('C:/Users/Induri Chandana/OneDrive/Desktop/QuizMaster/assets/Images/h1.jpg') no-repeat center center/cover; /* Updated image path */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+.hero .content h2 {
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+.hero .content span {
+    color: orange;
+}
+
+.hero .content p {
+    margin: 20px 0;
+    font-size: 18px;
+    max-width: 600px;
+}
+
+.hero .btn {
+    background-color: orange;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #507687;
+}
+
+/* Added Styling for the Image */
+.hero-image {
+    margin-top: 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Remove space between hero and footer */
+section.hero {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+footer {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* Footer styling */
+footer {
+    background-color: #507687;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.footer-grid div {
+    margin-bottom: 20px;
+}
+
+.footer-contact h3,
+.footer-social h3,
+.footer-newsletter h3 {
+    margin-bottom: 10px;
+    color: orange;
+}
+
+.footer-contact p,
+.footer-social ul,
+.footer-newsletter p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-social ul {
+    list-style-type: none;
+}
+
+.footer-social ul li {
+    margin: 5px 0;
+}
+
+.footer-social ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-social ul li a:hover {
+    color: orange;
+}
+
+.footer-newsletter input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    border: none;
+    margin-top: 10px;
+}
+
+.footer-newsletter button {
+    padding: 10px 15px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.footer-newsletter button:hover {
+    background-color: darkorange;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin: 0;
+}
+/* Add styles for transparent box */
+.hero .content {
+    background-color: rgba(252, 251, 251, 0.701); /* Black background with 60% transparency */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 600px; /* Limit the box width */
+    color: black; /* Ensure text is readable */
+    margin: 0 auto; /* Center the content horizontally */
+}
